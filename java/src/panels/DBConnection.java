@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-    // Moved to constants for easier maintenance
-    private static final String URL = "jdbc:mysql://localhost:3306/reliefops";
-    private static final String USER = "root";
-    private static final String PASS = "1602-akash-066";
+    // Database configuration loaded from DBConfig
+    private static final String URL = DBConfig.getUrl();
+    private static final String USER = DBConfig.getUser();
+    private static final String PASS = DBConfig.getPassword();
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 
     /**
